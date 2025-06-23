@@ -96,6 +96,31 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #FFD700;
         }
+        
+        /* Tab styles */
+        .tab-active {
+            border-bottom: 2px solid #39FF14;
+            color: #39FF14;
+        }
+        
+        .tab-inactive {
+            border-bottom: 2px solid transparent;
+            color: #ccc;
+        }
+        
+        .tab-inactive:hover {
+            color: #39FF14;
+        }
+        
+        /* Hide scrollbar for sponsor carousel */
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
     </style>
 </head>
 <body class="bg-dark text-white">
@@ -237,14 +262,14 @@
                     
                     <div class="aspect-w-16 aspect-h-9 mb-6">
                         <iframe 
-  id="live-video" 
-  class="w-full h-64 md:h-80 rounded-lg" 
-  src="https://www.youtube.com/embed/QQuxNwbjTLA?autoplay=1&mute=1" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-  allowfullscreen>
-</iframe>
-
+                            id="live-video"
+                            class="w-full h-64 md:h-80 rounded-lg"
+                            src="https://www.youtube.com/embed/QQuxNwbjTLA?autoplay=1&mute=1"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                     
                     <div class="text-center">
                         <p class="text-gray-400 mb-4">Assista nossa programação ao vivo no YouTube</p>
@@ -257,43 +282,6 @@
         </div>
     </section>
 
-    <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vídeos em Destaque</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .neon-text {
-            color: #fff;
-            text-shadow: 0 0 5px #0fa, 0 0 10px #0fa, 0 0 20px #0fa;
-        }
-        .neon-border {
-            border: 1px solid rgba(0, 255, 170, 0.3);
-            box-shadow: 0 0 10px rgba(0, 255, 170, 0.3);
-        }
-        .hover\:shadow-neon:hover {
-            box-shadow: 0 0 15px rgba(0, 255, 170, 0.5);
-        }
-        .text-neon {
-            color: #0fa;
-        }
-        .tab-active {
-            border-bottom: 2px solid #0fa;
-            color: #0fa;
-        }
-        .tab-inactive {
-            border-bottom: 2px solid transparent;
-            color: #ccc;
-        }
-        .tab-inactive:hover {
-            color: #0fa;
-        }
-    </style>
-</head>
-<body class="bg-black text-white">
     <!-- Videos Section -->
     <section id="videos" class="py-16 bg-black">
         <div class="container mx-auto px-4">
@@ -325,7 +313,7 @@
                         <div class="aspect-w-16 aspect-h-9">
                             <iframe 
                                 class="w-full h-64"
-                                src="https://www.youtube.com/watch?v=vOZ_zmPHxxk&t=1662s"
+                                src="https://www.youtube.com/embed/vOZ_zmPHxxk?start=1662"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
@@ -346,7 +334,7 @@
                         <div class="aspect-w-16 aspect-h-9">
                             <iframe 
                                 class="w-full h-64"
-                                src="https://www.youtube.com/watch?v=fctKPeAgag8&t=1714s"
+                                src="https://www.youtube.com/embed/fctKPeAgag8?start=1714"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
@@ -367,7 +355,7 @@
                         <div class="aspect-w-16 aspect-h-9">
                             <iframe 
                                 class="w-full h-64"
-                                src="https://www.youtube.com/watch?v=QQuxNwbjTLA&t=605s"
+                                src="https://www.youtube.com/embed/QQuxNwbjTLA?start=605"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
@@ -393,7 +381,7 @@
                         <div class="aspect-w-16 aspect-h-9">
                             <iframe 
                                 class="w-full h-64"
-                                src="https://www.youtube.com/watch?v=ujz9fYMa00U&t=23s"
+                                src="https://www.youtube.com/embed/ujz9fYMa00U?start=23"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
@@ -414,7 +402,7 @@
                         <div class="aspect-w-16 aspect-h-9">
                             <iframe 
                                 class="w-full h-64"
-                                src="https://www.youtube.com/watch?v=lAwFnp4ZpP0"
+                                src="https://www.youtube.com/embed/lAwFnp4ZpP0"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
@@ -435,7 +423,7 @@
                         <div class="aspect-w-16 aspect-h-9">
                             <iframe 
                                 class="w-full h-64"
-                                src="https://www.youtube.com/watch?v=Ph6q7cVBxXI"
+                                src="https://www.youtube.com/embed/Ph6q7cVBxXI"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
@@ -461,7 +449,7 @@
                         <div class="aspect-w-16 aspect-h-9">
                             <iframe 
                                 class="w-full h-64"
-                                src="https://www.youtube.com/watch?v=D6i3Ho3jdhg"
+                                src="https://www.youtube.com/embed/D6i3Ho3jdhg"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
@@ -482,7 +470,7 @@
                         <div class="aspect-w-16 aspect-h-9">
                             <iframe 
                                 class="w-full h-64"
-                                src="https://www.youtube.com/watch?v=8vxmiX-67_s"
+                                src="https://www.youtube.com/embed/8vxmiX-67_s"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
@@ -503,7 +491,7 @@
                         <div class="aspect-w-16 aspect-h-9">
                             <iframe 
                                 class="w-full h-64"
-                                src="https://www.youtube.com/watch?v=zU4BWhfi2NA"
+                                src="https://www.youtube.com/embed/zU4BWhfi2NA"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
@@ -520,39 +508,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <script>
-        function showTab(tabNumber) {
-            // Hide all tab contents
-            document.querySelectorAll('.tab-content').forEach(content => {
-                content.classList.add('hidden');
-            });
-            
-            // Show selected tab content
-            document.getElementById(`tabContent${tabNumber}`).classList.remove('hidden');
-            
-            // Update tab buttons styling
-            document.querySelectorAll('[id^="tab"]').forEach(tab => {
-                tab.classList.remove('tab-active');
-                tab.classList.add('tab-inactive');
-            });
-            
-            document.getElementById(`tab${tabNumber}`).classList.remove('tab-inactive');
-            document.getElementById(`tab${tabNumber}`).classList.add('tab-active');
-        }
-    </script>
-</body>
-</html>
-
-    </div>
-  </div>
-</section>
-
-            
             <div class="text-center mt-10">
-                <a href="https://youtube.com/@YOURCHANNELNAME" target="_blank" class="inline-block border-2 border-neon text-neon font-bold py-3 px-8 rounded-full hover:bg-neon hover:text-black transition duration-300">
+                <a href="https://youtube.com/@tvhuntterweb2025" target="_blank" class="inline-block border-2 border-neon text-neon font-bold py-3 px-8 rounded-full hover:bg-neon hover:text-black transition duration-300">
                     <i class="fab fa-youtube mr-2"></i> Ver Mais Vídeos
                 </a>
             </div>
@@ -564,7 +522,7 @@
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold font-title mb-4 gold-text">NOSSOS APRESENTADORES</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">Conheça o time que faz a Rádio e TV Huntter Web acontecer</p>
+                <p class="text-gray-400 max-w-2xl mx-auto">Conheça o team que faz a Rádio e TV Huntter Web acontecer</p>
             </div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -782,7 +740,7 @@
                             <p class="text-sm text-gray-400">Seg-Sex, 05:00 - 00:00</p>
                         </div>
                     </div>
-                    <p class="text-gray-300">Todas as notícias importantes do dia com nossos afiliados e equipe.</p>
+                    <p class="text-gray-300">Todas as notícias importantes do day com nossos afiliados e equipe.</p>
                 </div>
                 
                 <!-- Highlight Program 3 -->
@@ -878,10 +836,10 @@
                     <h3 class="text-xl font-bold mb-2 text-neon">SEGUIDORES</h3>
                     <p class="text-gray-400">Em nossas redes sociais</p>
                     <div class="flex justify-center space-x-4 mt-4">
-                        <a href="#" class="text-neon hover:text-gold text-2xl"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-neon hover:text-gold text-2xl"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-neon hover:text-gold text-2xl"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="text-neon hover:text-gold text-2xl"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/tvhuntterweb" class="text-neon hover:text-gold text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61554130160758&mibextid=gik2fB" class="text-neon hover:text-gold text-2xl"><i class="fab fa-facebook"></i></a>
+                        <a href="https://youtube.com/@tvhuntterweb2025" class="text-neon hover:text-gold text-2xl"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@studiohuntter?_t=ZM-8xP0kxm318A&_r=1" class="text-neon hover:text-gold text-2xl"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
             </div>
@@ -1033,13 +991,13 @@
                     <div>
                         <h3 class="text-lg font-bold text-neon mb-3">Redes Sociais</h3>
                         <div class="flex space-x-4">
-                            <a href="#" class="text-gray-400 hover:text-neon text-xl transition duration-300"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="text-gray-400 hover:text-neon text-xl transition duration-300"><i class="fab fa-facebook"></i></a>
-                            <a href="#" class="text-gray-400 hover:text-neon text-xl transition duration-300"><i class="fab fa-youtube"></i></a>
-                            <a href="#" class="text-gray-400 hover:text-neon text-xl transition duration-300"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.instagram.com/tvhuntterweb" class="text-gray-400 hover:text-neon text-xl transition duration-300"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61554130160758&mibextid=gik2fB" class="text-gray-400 hover:text-neon text-xl transition duration-300"><i class="fab fa-facebook"></i></a>
+                            <a href="https://youtube.com/@tvhuntterweb2025" class="text-gray-400 hover:text-neon text-xl transition duration-300"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.tiktok.com/@studiohuntter?_t=ZM-8xP0kxm318A&_r=1" class="text-gray-400 hover:text-neon text-xl transition duration-300"><i class="fab fa-tiktok"></i></a>
                         </div>
                         <div class="mt-4">
-                            <a href="#" class="text-gray-400 hover:text-neon text-sm transition duration-300 flex items-center">
+                            <a href="https://wa.me/5598999810660" class="text-gray-400 hover:text-neon text-sm transition duration-300 flex items-center">
                                 <i class="fab fa-whatsapp mr-2"></i> WhatsApp Comercial
                             </a>
                         </div>
@@ -1180,6 +1138,26 @@
         }
         
         updateNowStreaming();
+        
+        // Tab functionality
+        function showTab(tabNumber) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            
+            // Show selected tab content
+            document.getElementById(`tabContent${tabNumber}`).classList.remove('hidden');
+            
+            // Update tab buttons styling
+            document.querySelectorAll('[id^="tab"]').forEach(tab => {
+                tab.classList.remove('tab-active');
+                tab.classList.add('tab-inactive');
+            });
+            
+            document.getElementById(`tab${tabNumber}`).classList.remove('tab-inactive');
+            document.getElementById(`tab${tabNumber}`).classList.add('tab-active');
+        }
     </script>
 </body>
 </html>
