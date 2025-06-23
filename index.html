@@ -818,21 +818,21 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Online Users -->
                 <div class="bg-gray-900 rounded-xl p-8 text-center neon-border">
-                    <div class="text-5xl font-bold font-title mb-4 neon-text" id="online-users">586,245</div>
+                    <div class="text-5xl font-bold font-title mb-4 neon-text" id="online-users">0</div>
                     <h3 class="text-xl font-bold mb-2 text-neon">OUVINTES ONLINE</h3>
                     <p class="text-gray-400">Pessoas conectadas agora</p>
                 </div>
                 
                 <!-- Total Visits -->
                 <div class="bg-gray-900 rounded-xl p-8 text-center gold-border">
-                    <div class="text-5xl font-bold font-title mb-4 gold-text" id="total-visits">2,586,576</div>
+                    <div class="text-5xl font-bold font-title mb-4 gold-text" id="total-visits">0</div>
                     <h3 class="text-xl font-bold mb-2 text-gold">VISITAS TOTAIS</h3>
                     <p class="text-gray-400">Desde nossa fundação</p>
                 </div>
                 
                 <!-- Social Media -->
                 <div class="bg-gray-900 rounded-xl p-8 text-center neon-border">
-                    <div class="text-5xl font-bold font-title mb-4 neon-text" id="social-followers">1000K</div>
+                    <div class="text-5xl font-bold font-title mb-4 neon-text" id="social-followers">0</div>
                     <h3 class="text-xl font-bold mb-2 text-neon">SEGUIDORES</h3>
                     <p class="text-gray-400">Em nossas redes sociais</p>
                     <div class="flex justify-center space-x-4 mt-4">
@@ -1107,18 +1107,19 @@
             }, 3000);
         });
         
-        // Randomize stats for demo purposes
-        function updateStats() {
-            const onlineUsers = Math.floor(Math.random() * 500) + 1000;
+        // Set random stats on each page load
+        function setStats() {
+            // Generate random numbers within realistic ranges
+            const onlineUsers = Math.floor(Math.random() * (600000 - 500000 + 1)) + 500000; // Between 500k-600k
+            const totalVisits = Math.floor(Math.random() * (3000000 - 2000000 + 1)) + 2000000; // Between 2M-3M
+            const socialFollowers = Math.floor(Math.random() * (1200000 - 800000 + 1)) + 800000; // Between 800k-1.2M
+            
             document.getElementById('online-users').textContent = onlineUsers.toLocaleString();
-            
-            const socialFollowers = Math.floor(Math.random() * 100000) + 200000;
+            document.getElementById('total-visits').textContent = totalVisits.toLocaleString();
             document.getElementById('social-followers').textContent = Math.floor(socialFollowers / 1000) + 'K';
-            
-            setTimeout(updateStats, 5000);
         }
         
-        updateStats();
+        setStats();
         
         // Auto-update now streaming text
         const programs = [
